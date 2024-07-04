@@ -74,9 +74,21 @@ export const login = catchASyncError(async (req, res, next) => {
   sendToken(user, 200, res, "Login successfully");
 });
 
+// export const logout = catchASyncError(async (req, res, next) => {
+//   res
+//     .status(201)
+//     .json({
+//       success: true,
+//       message: "Logged out successfully",
+//     });
+// });
 export const logout = catchASyncError(async (req, res, next) => {
   res
     .status(201)
+    .token("token", null, {
+      expires: new Date(Date.now()),
+      httpOnly: true,
+    })
     .json({
       success: true,
       message: "Logged out successfully",
