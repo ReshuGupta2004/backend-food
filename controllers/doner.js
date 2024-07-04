@@ -8,10 +8,10 @@ const router = express.Router();
 
 export const donor_dashboard = catchASyncError(async (req, res, next) => {
   try {
-    console.log("req.user donate", req.user);
+    // console.log("req.user donate", req.user);
 
     const donorId = req.user._id;
-    console.log("id", donorId);
+    // console.log("id", donorId);
 
     const numCollectedDonations = await Donation.countDocuments({
       donor: donorId,
