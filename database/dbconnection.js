@@ -8,7 +8,7 @@ const dbConnection = async () => {
             dbName: "ngo_database",
             
         });
-        // console.log("MongoDB connected");
+        console.log("MongoDB connected");
     } catch (err) {
         // console.error("MongoDB connection failed:", err);
     }
