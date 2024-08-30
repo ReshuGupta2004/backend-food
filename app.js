@@ -24,6 +24,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(pagesPath, 'WelcomePage.html'));
 });
  
+
 app.use(
   cors({
     origin: 'https://food-frontend-iota.vercel.app',  
